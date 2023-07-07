@@ -14,12 +14,12 @@ export async function POST(req: Request) {
       return new NextResponse("Name is required", { status: 400 });
     }
     const randomNumber = Math.floor(10000000 + Math.random() * 90000000);
-    const storeId = randomNumber;
+    const store_Id = randomNumber;
     const store = await prismadb.store.create({
       data: {
         storeName: storeName,
         userId,
-        storeId,
+        store_Id,
       },
     });
     return NextResponse.json(store);
