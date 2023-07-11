@@ -2,6 +2,7 @@
 
 import { AlertModel } from "@/components/models/alert-model";
 import { ApiAlert } from "@/components/ui/api-alert";
+import { ApiList } from "@/components/ui/api-list";
 import { Button } from "@/components/ui/button";
 import {
   Form,
@@ -124,11 +125,12 @@ export const SettingsForm: React.FC<SettingsFormProps> = ({ initalData }) => {
         </form>
       </Form>
       <Separator />
-      <ApiAlert
+      <ApiList entityName="stores" entityIdName="storeId" />
+      {/* <ApiAlert
         title="NEXT_PUBLIC_API_URL"
         description={`${origin}/api/${params.storeId}`}
         variant="public"
-      />
+      /> */}
     </>
   );
 };
