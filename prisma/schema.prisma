@@ -23,8 +23,8 @@ model Store{
 
 model Billboard {
   id  String  @id @default(uuid())
-  storeId Int
-  store Store @relation("StoreToBillboard",fields: [storeId], references: [store_Id])
+  storeId String
+  store Store @relation("StoreToBillboard",fields: [storeId], references: [id])
   label String
   imageUrl  String
   createdAt DateTime          @default(now())
